@@ -1,0 +1,82 @@
+﻿<local:MyCard Title="伺服器公告" Margin="0,0,0,15" >
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,4"
+                   Text="目前版本为测试版，伺服器尚未正式开启，请等待更新~"
+/>
+        <TextBlock Margin="300,0,0,0" Foreground="#25c523"
+                   Text="--zhuhesuny"
+/>
+        <TextBlock Margin="340,0,0,0" 
+                   Text="6.23"
+/>
+    </StackPanel>
+</local:MyCard>
+    
+<local:MyCard Title="版本说明" Margin="0,0,0,15">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyHint Text="目前伺服器不在线，无法进入请不要反馈。" />
+        <TextBlock Margin="0,0,0,4" Foreground="#ff00ff"
+                   Text="版本：0.10（beta）"
+/>
+        <TextBlock Margin="0,0,0,4" TextWrapping="Wrap"
+                   Text="这是一个简单的测试版，Minecraft版本为原版1.19.3（内置光影，可选择开启），与第一季伺服器相匹配"
+/>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Title="启动器选项" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyHint Margin="0,0,0,7" IsWarn="False"
+                   Text="在这里可以快捷的进行部分操作" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <local:MyButton Margin="0,0,10,0" Width="115" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="伺服器官网" EventType="打开网页" ToolTip="前往官网"
+EventData="http://z-bamboo.ddnx.ml" />
+            <local:MyButton Margin="0,0,10,0" Width="115" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="刷新主页" EventType="刷新主页"
+ToolTip="点击刷新主页（获取最新消息及更新）" />
+            <local:MyButton Margin="0,0,10,0" 
+Width="115" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Red"
+                   Text="获取帮助" EventType="打开网页" EventData="http://z-bamboo.ddnx.ml/help" />
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+    
+
+<!-- 
+
+全部通用的属性：
+ - Width、Height：设置宽度与高度
+ - ToolTip：设置鼠标指向时的提示文本
+ - Foreground：调整前景颜色（十六进制字符串，例如 #FF010203 代表 ARGB 中的 255,1,2,3。前两位代表不透明度，FF 为全不透明，00 为全透明）
+ - Background：调整背景颜色（使用类似 Background="{DynamicResource ColorBrush5}" 的格式以调用 PCL2 当前的主题颜色，修改末尾的数字编号以改变颜色浓度）
+ - Margin：调整外边距（格式为 左,上,右,下。例如 Margin="0,0,0,2" 即为 2 单位的下边距）
+ - HorizontalAlignment：设置对齐方式（Left、Center、Right）
+
+TextBlock（纯文本）：
+ - Text：设置显示的文本（如果要使用引号等特殊字符，自行百度 XAML 转义）
+ - TextWrapping：开启自动换行
+ - FontSize：设置字号
+ 
+Image（图片）：
+ - Source：要显示的图片的网址
+
+local:MyHint（提示条）：
+ - Text：设置显示的文本（&#xa; 代表换行）
+ - IsWarn：设置为 True 代表警告样式，False 代表提示样式
+ 
+local:MyButton（按钮）：
+ - Text：设置显示的文本
+ - Padding：设置内边距，格式与 Margin 一致
+ - ColorType：设置颜色主题（Highlight 为当前启动器的主题颜色，Red 为红色，默认为黑色）
+ - EventType、EventData：触发特定事件
+ 
+local:MyTextButton（文本按钮）：
+ - Text：设置显示的文本
+ - EventType、EventData：触发特定事件
+ 
+local:MyCard（卡片）：
+ - Title：设置显示的标题文本
+ - CanSwap：这张卡片是否可以折叠，True 为是，False 为否
+ - IsSwaped：这张卡片是否默认折叠，要求 CanSwap 必须为 True
+
+-->
